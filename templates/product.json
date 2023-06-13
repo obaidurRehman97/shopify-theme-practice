@@ -112,6 +112,29 @@
         "padding_bottom": 12
       }
     },
+    "custom-popup-modal":{
+      "type": "custom-popup-modal",
+      "settings": {
+        "type":"text",
+        "id":"title",
+        "label":"Hello"
+      },
+      "blocks": {
+        "Button":{
+          "type": "Button",
+          "settings": {
+            "text":"Hello Friend",
+            "label":"Hello Friend",
+            "title":"Open Popup",
+            "heading":"Popup Heading from template json file !!!!!",
+            "content": "Hellloooo this is the content from template json file "
+          }
+        }
+      },
+      "block_order": [
+        "Button"
+      ]
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -208,6 +231,7 @@
     }
   },
   "order": [
+    "custom-popup-modal",
     "main",
     "image-with-text",
     "multicolumn",

@@ -1,0 +1,89 @@
+<div>
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when 'Button'  %}
+                <modal-opener
+                    class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                    data-modal="#PopupModal-{{ block.id }}"
+                    {{ block.shopify_attributes }}
+                >
+                    <button
+                        id="ProductPopup-{{ block.id }}"
+                        class="product-popup-modal__button button"
+                        type="button"
+                        aria-haspopup="dialog"
+                    >
+                        {{ block.settings.title  }}
+                    </button>
+                </modal-opener>
+           {%endcase%}
+           
+        <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
+        <div
+            role="dialog"
+            aria-label="{{ block.settings.text }}"
+            aria-modal="true"
+            class="product-popup-modal__content"
+            tabindex="-1"
+        >
+            <button
+            id="ModalClose-{{ block.id }}"
+            type="button"
+            class="product-popup-modal__toggle"
+            aria-label="{{ 'accessibility.close' | t }}"
+            >
+            {% render 'icon-close' %}
+            </button>
+            <div class="product-popup-modal__content-info">
+            <h1 class="h2">{{ block.settings.heading  }}</h1>
+            {{ block.settings.content  }}
+            </div>
+        </div>
+    </modal-dialog> 
+{% endfor %}
+</div>
+
+{% schema %}
+    {
+      "name": "Custom Popup",
+      "tag": "section",
+      "class": "Popup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Popup"
+        }
+      ],
+      "max_blocks": 5,
+      "blocks": [
+         {
+           "name": "Button",
+           "type": "Button",
+           "settings": [
+             {
+               "type": "text",
+               "id": "title",
+               "label": "Open"
+             },
+             {
+              "type": "text",
+              "id":"heading",
+              "label": "Heading"
+             },
+             {
+              "type": "text",
+              "id": "content",
+              "label": "Content"
+             }
+           ]
+         }
+      ],
+      "locales": {
+        "en": {
+          "title": "Popup"
+        } 
+      }
+    }
+    {% endschema %}
