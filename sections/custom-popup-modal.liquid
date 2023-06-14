@@ -19,15 +19,9 @@
       <div class="product-popup-modal__content-info">
         <h1 class="h2">{{ block.settings.heading }}</h1>
         {{ block.settings.content }}
-        {%when 'NameInput'%}
+        {%when 'InputField'%}
         <div class="field {{ block.settings.className }}">
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name"
-            value="{{ block.settings.value }}" placeholder="{{ block.settings.PlaceHolder  }}">
-          <label class="field__label" for="ContactForm-name">{{ block.settings.Label }}</label>
-        </div>
-        {%when 'PhoneInput'%}
-        <div class="field {{ block.settings.className }}">
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name"
+          <input class="field__input {{ block.settings.className }}" autocomplete="name" type="text" id="ContactForm-name"
             value="{{ block.settings.value }}" placeholder="{{ block.settings.PlaceHolder  }}">
           <label class="field__label" for="ContactForm-name">{{ block.settings.Label }}</label>
         </div>
@@ -91,9 +85,9 @@
          ]
       },
       {
-         "name":"NameInput",
-         "type":"NameInput",
-         "limit":1,
+         "name":"InputField",
+         "type":"InputField",
+         "limit":2,
          "settings":[
             {
                "type":"text",
@@ -116,34 +110,7 @@
                "label":"ClassName"
             }
          ]
-      },
-      {
-         "name":"PhoneInput",
-         "type":"PhoneInput",
-         "limit":1,
-         "settings":[
-            {
-               "type":"text",
-               "id":"PlaceHolder",
-               "label":"PlaceHolder"
-            },
-            {
-               "type":"text",
-               "id":"Value",
-               "label":"Value"
-            },
-            {
-               "type":"text",
-               "id":"Label",
-               "label":"Label"
-            },
-            {
-               "type":"text",
-               "id":"className",
-               "label":"ClassName"
-            }
-         ]
-      },
+      },  
       {
          "name":"SubmitButton",
          "type":"SubmitButton",
@@ -187,6 +154,16 @@
                "label":"ClassName"
             }
          ]
+      }
+   ],
+   "presets": [
+      {
+        "name": "Custom Popup",
+        "blocks": [
+          {
+            "type":"InputField"
+          }
+        ]
       }
    ],
    "locales":{

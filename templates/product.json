@@ -131,22 +131,22 @@
             "className" : "bg-red"
           }
         },
-        "NameInput":{
-          "type": "NameInput",
+        "InputField-1":{
+          "type": "InputField",
           "settings": {
             "PlaceHolder":"Please Enter your Name",
             "Value":"",
             "Label":"Name",
-            "className" : "margin-top-1"
+            "className" : "margin-top-1 bg-green"
           }
         },
-        "PhoneInput":{
-          "type": "PhoneInput",
+        "InputField-2":{
+          "type": "InputField",
           "settings": {
-            "PlaceHolder":"Please Enter your Phone Number",
+            "PlaceHolder":"Please Enter your Number",
             "Value":"",
-            "Label":"Phone Number",
-            "className" : "margin-top-1"
+            "Label":"Number",
+            "className" : "margin-top-1 bg-red"
           }
         },
         "SubmitButton":{
@@ -167,8 +167,8 @@
       },
       "block_order": [
         "Button",
-        "NameInput",
-        "PhoneInput",
+        "InputField-1",
+        "InputField-2",
         "CheckBox",
         "SubmitButton"
       ]
