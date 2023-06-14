@@ -85,6 +85,42 @@ html.no-js .no-js:not(html) {
   display: none !important;
 }
 
+.margin-top-1 {
+  margin-top: 10px !important;
+}
+.bg-red {
+  background-color: red !important;
+}
+.bg-red:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgb(var(red)), 0 0 0 0.5rem rgba(var(red), 0.5), 0 0 0.5rem 0.4rem rgba(var(red), 0.3) !important;
+}
+
+.bg-red:hover {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgb(var(red)), 0 0 0 0.5rem rgba(var(red), 0.5), 0 0 0.5rem 0.4rem rgba(var(red), 0.3) !important;
+}
+.bg-green {
+  background-color: green !important;
+}
+.bg-green:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgb(var(green)), 0 0 0 0.5rem rgba(var(green), 0.5), 0 0 0.5rem 0.4rem rgba(var(green), 0.3) !important;
+}
+
+.bg-green:hover {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem rgb(var(green)), 0 0 0 0.5rem rgba(var(green), 0.5), 0 0 0.5rem 0.4rem rgba(var(green), 0.3) !important;
+}
+.btn-container {
+  display: flex;
+  margin-top: 200px !important;
+  width: 100%;
+  justify-content: flex-end;
+}
+.checkbox-container {
+  margin-top: 10px;
+}
 html.no-js .no-js-inline {
   display: inline-block !important;
 }

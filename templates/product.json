@@ -127,12 +127,50 @@
             "label":"Hello Friend",
             "title":"Open Popup",
             "heading":"Popup Heading from template json file !!!!!",
-            "content": "Hellloooo this is the content from template json file "
+            "content": "Hellloooo this is the content from template json file",
+            "className" : "bg-red"
+          }
+        },
+        "NameInput":{
+          "type": "NameInput",
+          "settings": {
+            "PlaceHolder":"Please Enter your Name",
+            "Value":"",
+            "Label":"Name",
+            "className" : "margin-top-1"
+          }
+        },
+        "PhoneInput":{
+          "type": "PhoneInput",
+          "settings": {
+            "PlaceHolder":"Please Enter your Phone Number",
+            "Value":"",
+            "Label":"Phone Number",
+            "className" : "margin-top-1"
+          }
+        },
+        "SubmitButton":{
+          "type": "SubmitButton",
+          "settings": {
+            "buttonText":"Submit Form",
+            "className" : "bg-green",
+            "containerClass" : "btn-container"
+          }
+        },
+        "CheckBox" : {
+          "type": "CheckBox",
+          "settings": {
+            "className":"checkbox-container",
+            "label":"Verified"
           }
         }
       },
       "block_order": [
-        "Button"
+        "Button",
+        "NameInput",
+        "PhoneInput",
+        "CheckBox",
+        "SubmitButton"
       ]
     },
     "image-with-text": {
